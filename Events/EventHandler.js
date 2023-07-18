@@ -1,21 +1,13 @@
 class EventsHandler{
     constructor(application){
         window.App=application;
-        window.Like=(id)=>{
-            let t=`like${id}`;
-           
-          let span=parseInt(document.getElementById(t).textContent);
-         
-          document.getElementById(t).innerText=++span;
-            window.App.addLike(id);
-        }
-        window.DisLike=(id)=>{
-            let t=`dislike${id}`;
+
+        window.Likes=(id,temp)=>{
+            let t = temp ?`like${id}`:`dislike${id}`;
             let span=parseInt(document.getElementById(t).textContent);
             document.getElementById(t).innerText=++span;
-              window.App.addDislike(id);
-        
-        };
+            window.App.Likes(id,temp);
+        }
     }
 }
 export default EventsHandler;

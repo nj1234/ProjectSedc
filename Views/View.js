@@ -3,9 +3,7 @@ import DrawMain from "./DrawMain.js";
 
 class View {
     constructor(){
-      this.main=new DrawMain();
-      
-      
+      this.main=new DrawMain();  
     };
     Display(activeState,data){
 
@@ -16,14 +14,12 @@ class View {
             }
             case 'btn-1':{
                   this.main.DrawLates(data);
-                 
                    break;
             }
             case 'btn-2':{
                 this.main.DrawEvents(data);
                  break;
             }
-        
         }
      }
 

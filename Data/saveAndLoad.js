@@ -55,7 +55,6 @@ class LoadAndSave{
            return this.mergeNewsAndLikes();
         }
         case "btn-2":{
-           
             return this.events;
         }
 
@@ -67,22 +66,17 @@ class LoadAndSave{
             for(let i=0;i<this.likes.length;i++)
             {
                 if(this.likes[i].id==id){
-                    this.likes[i].thumbsUp++;
-                   
+                    this.likes[i].thumbsUp++;                  
                 }
-            }
-        
-       
-        }else{
-            for(let i=0;i<this.likes.length;i++)
-            {
-                if(this.likes[i].id==id){
-                    this.likes[i].thumbsDown++;
-                    
-                }
-            }
-
-        }
+            }      
+        } else {
+             for(let i=0;i<this.likes.length;i++)
+             {
+                 if(this.likes[i].id==id){
+                     this.likes[i].thumbsDown++;
+                 }
+             }
+           }
         this.local.addObj(this.likes,"Likes");
     }
 };

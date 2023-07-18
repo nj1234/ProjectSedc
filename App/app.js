@@ -7,18 +7,13 @@ class App{
       this.setButtonsEvents();
       this.view = new View();
       this.loadAndSave = new SL();
-   
-      
     }
     Run(){
       let temp=this.loadAndSave.loadData(this.activeState);
       this.view.Display(this.activeState,temp);
     }
-    addLike(id){
-      this.loadAndSave.saveData(id);
-    }
-    addDislike(id){
-      this.loadAndSave.saveData(id,false);
+    Likes(id,temp){
+      this.loadAndSave.saveData(id,temp);
     }
     setButtonsEvents(){
         const buttons= document.getElementsByTagName('button');
